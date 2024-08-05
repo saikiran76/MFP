@@ -1,8 +1,8 @@
 name: deploy-auth
 
-on:
+on: # what events are we watching for
   push:
-    branches:
+    branches: # branches
       - main
     paths:
       - 'packages/auth/**'
@@ -11,9 +11,9 @@ defaults:
   run:
     working-directory: packages/auth
 
-jobs:
+jobs: # build and deploy our project
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # linux based virtual system
 
     steps:
       - uses: actions/checkout@v2
